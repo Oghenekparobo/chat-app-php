@@ -2,10 +2,14 @@
 require_once 'header.php';
 include_once 'backend/config.php';
 
+
+
 if (!$_SESSION['reference_id'] || !isset($_SESSION['reference_id'])) {
   header('location: login.php');
 
 }
+
+
 
 
 ?>
@@ -21,8 +25,6 @@ if (!$_SESSION['reference_id'] || !isset($_SESSION['reference_id'])) {
 
       }
 
-
-
       ?>
       <div class="content">
         <img src="backend/images/<?php echo $row['img']; ?>" alt="" />
@@ -35,61 +37,14 @@ if (!$_SESSION['reference_id'] || !isset($_SESSION['reference_id'])) {
           </p>
         </div>
       </div>
-      <a href="#" class="logout">logout</a>
+      <a href="backend/logout.php?user_id=<?php echo $row['reference_id']; ?>" class="logout">logout</a>
     </header>
     <div class="search">
       <input type="text" placeholder="enter name to search" />
       <button><i class="fas fa-search"></i></button>
     </div>
     <div class="users-list">
-      <a href="">
-        <div class="content">
-          <img src="img.jpg" alt="" />
-          <div class="details">
-            <span>steph</span>
-            <p>this is a text message</p>
-          </div>
-          <div class="status-dot">
-            <i class="fas fa-circle"></i>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div class="content">
-          <img src="img.jpg" alt="" />
-          <div class="details">
-            <span>steph</span>
-            <p>this is a text message</p>
-          </div>
-          <div class="status-dot">
-            <i class="fas fa-circle"></i>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div class="content">
-          <img src="img.jpg" alt="" />
-          <div class="details">
-            <span>steph</span>
-            <p>this is a text message</p>
-          </div>
-          <div class="status-dot">
-            <i class="fas fa-circle"></i>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div class="content">
-          <img src="img.jpg" alt="" />
-          <div class="details">
-            <span>steph</span>
-            <p>this is a text message</p>
-          </div>
-          <div class="status-dot">
-            <i class="fas fa-circle"></i>
-          </div>
-        </div>
-      </a>
+
     </div>
   </section>
 </div>
